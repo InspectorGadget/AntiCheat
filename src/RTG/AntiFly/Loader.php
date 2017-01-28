@@ -77,6 +77,7 @@ class Loader extends PluginBase implements Listener {
                             elseif ($this->get($p) === 6) {
                                 $this->points->set($p->getName(), 0);
                                 $p->setBanned(true); 
+                                $this->getServer()->broadcastMessage("[LEET] $n has been banned due to Suspicious Activity!");
                             }
                                            
                     }
