@@ -93,10 +93,11 @@ class AntiCommand implements CommandExecutor {
                                 
                                 $list = new Config($this->plugin->getDataFolder() . "whitelist.txt", Config::ENUM);
                                 
-                                $msg = $list->getAll();
+                                $msg = $list->getAll(true);
                                 
                                 $m = implode(", ", $msg);
                                 
+                                $sender->sendMessage("-- Your Cheat Execption List --");
                                 $sender->sendMessage($m);
                                  
                                 return true;
