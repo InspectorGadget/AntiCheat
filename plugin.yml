@@ -1,0 +1,11 @@
+name: AntiFly
+version: 1.0.0
+main: RTG\AntiFly\Loader
+api: 2.1.0
+author: IG
+commands:
+    anticheat:
+        permission: anticheat.command
+permissions:
+    anticheat.command:
+        default: op
