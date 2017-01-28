@@ -102,6 +102,13 @@ class AntiCommand implements CommandExecutor {
                                  
                                 return true;
                             break;
+                            
+                            case "test": // For Testing purpose !
+                                
+                                $this->plugin->set($sender, 0);
+                                
+                                return true;
+                            break;
                                
                         }
                             
