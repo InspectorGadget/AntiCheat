@@ -9,7 +9,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\Server;
 use pocketmine\Player;
-use pocketmine\math\Vector3;
 use pocketmine\level\Level;
 use pocketmine\block\Block;
 
@@ -50,7 +49,7 @@ class Loader extends PluginBase implements Listener {
         /* Gather Info */
         $p = $e->getPlayer();
         $n = $p->getName();
-        $block = $e->getPlayer()->getLevel()->getBlock(new Vector3($player->getFloorX(),$player->getFloorY()-1,$player->getFloorZ()));
+        $block = $p->getLevel()->getBlock($p->subtract(0, 1, 0));
         
             if($block->getID === 0 and !$block->getID() == 10 and !$block->getID() == 11 and !$block->getID() == 8 and !$block->getID() == 9 and !$block->getID() == 182 and !$block->getID() == 126 and !$block->getID() == 44) {
                 if(isset($this->whitelist[strtolower($n)])) {
