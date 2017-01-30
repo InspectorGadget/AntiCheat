@@ -1,8 +1,8 @@
 <?php
 
-namespace RTG\AntiFly;
+namespace RTG\AntiCheat;
 
-use RTG\AntiFly\cmd\AntiCommand;
+use RTG\AntiCheat\cmd\AntiCommand;
 
 /* Essentials */
 use pocketmine\plugin\PluginBase;
