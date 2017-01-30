@@ -1,8 +1,8 @@
 <?php
 
-namespace RTG\AntiFly\cmd;
+namespace RTG\AntiCheat\cmd;
 
-use RTG\AntiFly\Loader;
+use RTG\AntiCheat\Loader;
 
 use pocketmine\command\CommandSender;
 use pocketmine\command\CommandExecutor;
