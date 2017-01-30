@@ -1,6 +1,6 @@
-name: AntiCheat
+name: AntiFly
 version: 1.0.0
-main: RTG\AntiCheat\Loader
+main: RTG\AntiFly\Loader
 api: 2.1.0
 author: IG
 commands:
