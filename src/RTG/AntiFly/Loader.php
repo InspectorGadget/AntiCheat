@@ -54,7 +54,8 @@ class Loader extends PluginBase implements Listener {
             if($block->getID === 0 and !$block->getID() == 10 and !$block->getID() == 11 and !$block->getID() == 8 and !$block->getID() == 9 and !$block->getID() == 182 and !$block->getID() == 126 and !$block->getID() == 44) {
                 if(isset($this->whitelist[strtolower($n)])) {
                     return false;
-                }else {
+                }
+                else {
                     
                     if(!$this->points->exists($p->getName())) {
                         $this->points->set($p->getName(), 0);
