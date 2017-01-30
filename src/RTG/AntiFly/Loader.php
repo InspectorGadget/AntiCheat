@@ -53,30 +53,26 @@ class Loader extends PluginBase implements Listener {
         
             if($block->getID === 0 and !$block->getID() == 10 and !$block->getID() == 11 and !$block->getID() == 8 and !$block->getID() == 9 and !$block->getID() == 182 and !$block->getID() == 126 and !$block->getID() == 44) {
                 if(isset($this->whitelist[strtolower($n)])) {
-                    if($p->isOp(true)) {
-                        return false;
-                    }
-                }
-                else {
+                    return false;
+                }else {
                     
                     if(!$this->points->exists($p->getName())) {
                         $this->points->set($p->getName(), 0);
                     }
                     
                     else {
-                        
                         $this->set($p, ($this->get($p)+1));
-                        
-                            if($this->get($p) === 2) {
+                        //todo add config auto ban = bad
+                        if($this->get($p) === 2) {
                                 $p->kick("You have been kicked for Suspicious Activity");
-                            }
-                            else if($this->get($p) === 4) {
-                                    $p->kick("Please refrain from Hacking or moving incorrectly!");
-                            }
-                            elseif ($this->get($p) === 6) {
-                                $this->points->set($p->getName(), 0);
-                                $p->setBanned(true); 
-                                $this->getServer()->broadcastMessage("[LEET] $n has been banned due to Suspicious Activity!");
+                        }
+                        else if($this->get($p) === 4) {
+                            $p->kick("Please refrain from Hacking or moving incorrectly!");   
+                        }
+                        elseif ($this->get($p) === 6) {
+                            $this->points->set($p->getName(), 0);
+                            $p->setBanned(true); 
+                            $this->getServer()->broadcastMessage("[LEET] $n has been banned due to Suspicious Activity!");
                             }
                                            
                     }
