@@ -51,7 +51,7 @@ class Loader extends PluginBase implements Listener {
         $n = $p->getName();
         $block = $p->getLevel()->getBlock($p->subtract(0, 1, 0));
         
-            if($block->getID === 0 and !$block->getID() == 10 and !$block->getID() == 11 and !$block->getID() == 8 and !$block->getID() == 9 and !$block->getID() == 182 and !$block->getID() == 126 and !$block->getID() == 44) {
+            if($block->getId() === 0 and !$block->getId() == 10 and !$block->getId() == 11 and !$block->getId() == 8 and !$block->getId() == 9 and !$block->getId() == 182 and !$block->getId() == 126 and !$block->getId() == 44) {
                 if(isset($this->whitelist[strtolower($n)])) {
                     return false;
                 }
