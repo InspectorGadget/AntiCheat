@@ -34,7 +34,7 @@ class Loader extends PluginBase implements Listener {
         $list = new Config($this->getDataFolder() . "whitelist.txt", Config::ENUM);
         $this->points = new Config($this->getDataFolder() . "points.yml", Config::YAML, array());
         
-        $this->whitelist = $list->getAll();;
+        $this->whitelist = $list->getAll();
     }
     
     public function saveEm() {
